@@ -129,3 +129,32 @@ body {
     transform: translateY(100vh) translateX(-30px) rotate(360deg);
   }
 }
+
+.mapa-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.btn-mapa {
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #5a2a2a;
+  background: linear-gradient(45deg, #f8c8dc, #f4a6b8);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-mapa:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-mapa {
+  backdrop-filter: blur(6px);
+}
