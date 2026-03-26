@@ -19,16 +19,21 @@ body {
 }
 
 .overlay {
-  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 40px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 /* TEXTOS */
 .nome {
-  font-family: 'Great Vibes', cursive;
-  font-size: 80px;
-  color: #d4af37;
+  font-family: 'Lucida Handwriting', cursive;
+  font-size: 90px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #FFD700;
   margin: 0;
 }
+
 
 .subtitulo {
   font-size: 40px;
@@ -48,4 +53,28 @@ section {
 h2 {
   color: #c27c8a;
   font-size: 32px;
+}
+
+body {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sobre, .evento {
+  background: white;
+  margin: 40px auto;
+  width: 80%;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
