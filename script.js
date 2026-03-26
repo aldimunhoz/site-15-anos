@@ -17,7 +17,7 @@ const container = document.querySelector(".petalas-container");
 
 function criarPetala() {
   const petala = document.createElement("img");
-  petala.src = "/Users/aldimunhoz/Documents/site-15-anos/imagens/rosepetala.png";
+  petala.src = "imagens/rosepetala.png";;
   petala.classList.add("petala");
 
   const tamanho = 10 + Math.random() * 20;
