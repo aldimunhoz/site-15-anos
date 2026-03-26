@@ -110,14 +110,24 @@ body {
 }
 
 /* PÉTALA */
-.petala {
+..petala {
   position: absolute;
   top: -50px;
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, #ffb6c1, #ff69b4);
-  border-radius: 50% 70% 70% 50%;
+  pointer-events: none;
   animation: cair linear;
+}
+
+/* movimento mais natural */
+@keyframes cair {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(100vh) translateX(-30px) rotate(360deg);
+  }
 }
 
 /* ANIMAÇÃO */

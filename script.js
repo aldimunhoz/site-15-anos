@@ -16,18 +16,22 @@ const x = setInterval(function () {
 const container = document.querySelector(".petalas-container");
 
 function criarPetala() {
-  const petala = document.createElement("div");
+  const petala = document.createElement("img");
+  petala.src = "/Users/aldimunhoz/Documents/site-15-anos/imagens/rosepetala.png";
   petala.classList.add("petala");
 
+  const tamanho = 10 + Math.random() * 20;
+  petala.style.width = tamanho + "px";
+
   petala.style.left = Math.random() * 100 + "vw";
-  petala.style.animationDuration = (5 + Math.random() * 5) + "s";
-  petala.style.opacity = Math.random();
+  petala.style.animationDuration = (6 + Math.random() * 6) + "s";
+  petala.style.opacity = 0.6 + Math.random() * 0.4;
 
   container.appendChild(petala);
 
   setTimeout(() => {
     petala.remove();
-  }, 10000);
+  }, 12000);
 }
 
-setInterval(criarPetala, 400);
+setInterval(criarPetala, 300);
