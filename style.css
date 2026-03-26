@@ -105,6 +105,8 @@ body {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
+  z-index: 9999; 
+  border-radius: 50% 60% 60% 50%;
 }
 
 /* PÉTALA */
