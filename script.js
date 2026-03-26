@@ -11,3 +11,23 @@ const x = setInterval(function () {
   document.getElementById("countdown").innerHTML =
     `<span>${dias} dias</span> | <span>${horas}h</span> | <span>${minutos}m</span>`;
 }, 60000);
+
+// ===== PÉTALAS =====
+const container = document.querySelector(".petalas-container");
+
+function criarPetala() {
+  const petala = document.createElement("div");
+  petala.classList.add("petala");
+
+  petala.style.left = Math.random() * 100 + "vw";
+  petala.style.animationDuration = (5 + Math.random() * 5) + "s";
+  petala.style.opacity = Math.random();
+
+  container.appendChild(petala);
+
+  setTimeout(() => {
+    petala.remove();
+  }, 10000);
+}
+
+setInterval(criarPetala, 400);

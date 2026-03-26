@@ -95,3 +95,35 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
+/* CONTAINER */
+.petalas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* PÉTALA */
+.petala {
+  position: absolute;
+  top: -50px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffb6c1, #ff69b4);
+  border-radius: 50% 70% 70% 50%;
+  animation: cair linear;
+}
+
+/* ANIMAÇÃO */
+@keyframes cair {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
