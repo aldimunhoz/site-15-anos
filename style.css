@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #fff5f7;
+  color: #5a2a2a;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(255, 240, 245, 0.7), rgba(255, 240, 245, 0.7)),
+              url("imagens/fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+}
+
+/* TEXTOS */
+.nome {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  color: #d4af37;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.tema {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+/* SEÇÕES */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  color: #c27c8a;
+  font-size: 32px;
+}
