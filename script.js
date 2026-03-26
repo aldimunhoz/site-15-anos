@@ -10,4 +10,4 @@ const x = setInterval(function () {
 
   document.getElementById("countdown").innerHTML =
     `<span>${dias} dias</span> | <span>${horas}h</span> | <span>${minutos}m</span>`;
-}, 1000);
+}, 60000);
