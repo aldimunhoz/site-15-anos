@@ -1,37 +1,41 @@
-const dataFesta = new Date("Oct 26, 2026 20:30:00").getTime();
+document.addEventListener("DOMContentLoaded", () => {
 
-const x = setInterval(function () {
-  const agora = new Date().getTime();
-  const distancia = dataFesta - agora;
+  // ===== CONTADOR =====
+  const dataFesta = new Date("Oct 26, 2026 20:30:00").getTime();
 
-  const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+  setInterval(function () {
+    const agora = new Date().getTime();
+    const distancia = dataFesta - agora;
 
-  document.getElementById("countdown").innerHTML =
-    `<span>${dias} dias</span> | <span>${horas}h</span> | <span>${minutos}m</span>`;
-}, 60000);
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-// ===== PÉTALAS =====
-const container = document.querySelector(".petalas-container");
+    document.getElementById("countdown").innerHTML =
+      `${dias} dias • ${horas} horas`;
+  }, 60000);
 
-function criarPetala() {
-  const petala = document.createElement("img");
-  petala.src = "imagens/rosepetala.png";;
-  petala.classList.add("petala");
+  // ===== PÉTALAS =====
+  const container = document.querySelector(".petalas-container");
 
-  const tamanho = 10 + Math.random() * 20;
-  petala.style.width = tamanho + "px";
+  function criarPetala() {
+    const petala = document.createElement("img");
+    petala.src = "imagens/rosepetala.png";
+    petala.classList.add("petala");
 
-  petala.style.left = Math.random() * 100 + "vw";
-  petala.style.animationDuration = (6 + Math.random() * 6) + "s";
-  petala.style.opacity = 0.6 + Math.random() * 0.4;
+    const tamanho = 30 + Math.random() * 40;
+    petala.style.width = tamanho + "px";
 
-  container.appendChild(petala);
+    petala.style.left = Math.random() * 100 + "vw";
+    petala.style.animationDuration = (6 + Math.random() * 6) + "s";
+    petala.style.opacity = 0.6 + Math.random() * 0.4;
 
-  setTimeout(() => {
-    petala.remove();
-  }, 12000);
-}
+    container.appendChild(petala);
 
-setInterval(criarPetala, 300);
+    setTimeout(() => {
+      petala.remove();
+    }, 12000);
+  }
+
+  setInterval(criarPetala, 500);
+
+});

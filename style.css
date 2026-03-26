@@ -110,7 +110,7 @@ body {
 }
 
 /* PÉTALA */
-..petala {
+.petala {
   position: absolute;
   top: -50px;
   pointer-events: none;
@@ -127,15 +127,5 @@ body {
   }
   100% {
     transform: translateY(100vh) translateX(-30px) rotate(360deg);
-  }
-}
-
-/* ANIMAÇÃO */
-@keyframes cair {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
   }
 }
