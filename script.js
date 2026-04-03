@@ -39,3 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(criarPetala, 500);
 
 });
+
+const btn = document.getElementById("musica-btn");
+const player = document.getElementById("player");
+
+btn.addEventListener("click", () => {
+  player.style.display = "block";
+  btn.style.display = "none";
+});
